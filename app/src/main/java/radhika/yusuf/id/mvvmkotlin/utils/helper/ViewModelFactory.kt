@@ -4,6 +4,7 @@ import android.app.Application
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import radhika.yusuf.id.mvvmkotlin.mvvm.home.HomeViewModel
+import radhika.yusuf.id.mvvmkotlin.mvvm.home.empty.EmptyViewModel
 
 /**
  * Created by radhikayusuf on 17/11/2018.
@@ -17,6 +18,8 @@ class ViewModelFactory private constructor(
     override fun <T : ViewModel?> create(modelClass: Class<T>) =
             with(modelClass) {
                 when {
+                    isAssignableFrom(EmptyViewModel::class.java) ->
+                        EmptyViewModel(mApplication)
                     isAssignableFrom(HomeViewModel::class.java) ->
                         HomeViewModel(mApplication)
                     else ->

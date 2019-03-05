@@ -58,6 +58,7 @@ dependencies {
 
     implementation "android.arch.persistence.room:runtime:$rootProject.archRoomVersion"
     implementation "android.arch.persistence.room:rxjava2:$rootProject.archRoomVersion"
+    implementation 'com.android.support:support-v4:28.0.0'
     kapt "android.arch.persistence.room:compiler:$rootProject.archRoomVersion"
     implementation "android.arch.lifecycle:extensions:$rootProject.archLifecycleExtensionsVersion"
     implementation "android.arch.lifecycle:common-java8:$rootProject.archLifecycleVersion"

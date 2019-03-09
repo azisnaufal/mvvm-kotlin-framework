@@ -26,6 +26,7 @@ Framework with MVVM design pattern
 ## Known issues
 
 1. After adding new activity from template, Android Studio will mark some identifiers as invalid. To fix this issue, just rebuild the project
+2. Android gradle version cannot be upgraded. We're stuck with 3.1.4 because the last stable version of com.android.databinding:compiler is 3.1.4 
 
 ## Contributing
 

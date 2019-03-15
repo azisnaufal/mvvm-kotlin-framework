@@ -40,6 +40,8 @@ buildscript {
         retrofitVersion = "2.3.0"
         okhttpVersion = "3.9.0"
         loggingInterceptorVersion = "3.8.0"
+        kotlinxCoroutinesVersion = "1.1.1"
+        retrofit2kotlinadapterVersion = "0.9.2"
 
         glideVersion = "4.8.0"
     }

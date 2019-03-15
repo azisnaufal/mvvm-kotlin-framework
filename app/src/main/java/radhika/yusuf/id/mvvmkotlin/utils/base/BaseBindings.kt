@@ -17,7 +17,7 @@ object BaseBindings {
     @JvmStatic
     fun setListDataHome(recyclerView: RecyclerView, data: List<HomeModel>?) {
         with(recyclerView.adapter as HomeAdapter) {
-            if (data != null) {
+            if (!data.isNullOrEmpty()) {
                 replaceData(data)
             }
         }

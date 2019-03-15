@@ -28,6 +28,7 @@ class LocalDataSource(context: Context) : DataSource {
         } catch (e: Exception){
             callback.onError(e.message?:e.localizedMessage)
         }
+        callback.onFinish()
 
     }
 

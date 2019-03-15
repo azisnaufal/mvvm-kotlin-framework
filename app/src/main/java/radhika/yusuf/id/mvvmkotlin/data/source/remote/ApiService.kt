@@ -1,6 +1,7 @@
 package radhika.yusuf.id.mvvmkotlin.data.source.remote
 
-import io.reactivex.Observable
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import kotlinx.coroutines.Deferred
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -9,7 +10,6 @@ import radhika.yusuf.id.mvvmkotlin.MyApplication
 import radhika.yusuf.id.mvvmkotlin.data.model.HeroesModel
 import radhika.yusuf.id.mvvmkotlin.utils.base.BaseApiModel
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import java.util.concurrent.TimeUnit
@@ -22,7 +22,7 @@ interface ApiService {
 
 
     @GET("master/superheroes.json")
-    fun getListHeroes(): Observable<BaseApiModel<List<HeroesModel>?>>
+    fun getListHeroes(): Deferred<BaseApiModel<List<HeroesModel>?>>
 
 
     companion object Factory {
@@ -65,7 +65,8 @@ interface ApiService {
             val mRetrofit = Retrofit.Builder()
                     .baseUrl(BuildConfig.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                    .addCallAdapterFactory(CoroutineCallAdapterFactory())
                     .client(mClient)
                     .build()
 

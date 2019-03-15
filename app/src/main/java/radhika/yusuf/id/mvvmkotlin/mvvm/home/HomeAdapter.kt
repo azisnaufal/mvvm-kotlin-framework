@@ -1,6 +1,7 @@
 package radhika.yusuf.id.mvvmkotlin.mvvm.home
 
 
+import android.databinding.ObservableList
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -27,7 +28,8 @@ class HomeAdapter(var mData: List<HomeModel>, private val mViewModel: HomeViewMo
 
 
     fun replaceData(data: List<HomeModel>) {
-        mData = data
+        println("ini berjalan")
+        mData = data as ObservableList<HomeModel>
         notifyDataSetChanged()
     }
 

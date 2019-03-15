@@ -9,7 +9,7 @@ Framework with MVVM design pattern
 1. Install this template https://github.com/azisnaufal/android-template
 2. Clone this project, and open it from your Android Studio.
 3. Wait until the gradle finish.
-4. Update any outdated plugin, build tools, etc.
+4. U̶p̶d̶a̶t̶e̶ ̶a̶n̶y̶ ̶o̶u̶t̶d̶a̶t̶e̶d̶ ̶p̶l̶u̶g̶i̶n̶,̶ ̶b̶u̶i̶l̶d̶ ̶t̶o̶o̶l̶s̶,̶ ̶e̶t̶c̶.̶ *Take a look at known issue number 2 below.*
 5. If you need to change the package name : https://stackoverflow.com/questions/16804093/rename-package-in-android-studio
 
 #### Adding an activity

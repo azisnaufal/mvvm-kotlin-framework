@@ -28,7 +28,6 @@ class HomeAdapter(private val mViewModel: HomeViewModel) :
 
 
     fun replaceData(data: List<HomeModel>) {
-        println("ini berjalan")
         mData = data as ObservableList<HomeModel>
         notifyDataSetChanged()
     }
